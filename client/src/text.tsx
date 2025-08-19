@@ -1,3 +1,73 @@
+import { User, TrendingUp, Users, Phone } from 'lucide-react';
+
+// Why Us Section Texts
+export const WHY_US_SECTION_TITLE = 'Why Clients Trust Us';
+export const WHY_US_SECTION_SUBTITLE =
+	'Hover over each card to discover what makes us different';
+export const WHY_US_REASONS = [
+	{
+		icon: User,
+		title: 'Personalized Advice',
+		description: [
+			'Tailored strategies for your unique financial goals.',
+		],
+	},
+	{
+		icon: TrendingUp,
+		title: 'Proven Track Record',
+		description: [
+			'Consistent success in helping clients achieve their goals.',
+			'Trusted by hundreds of satisfied clients worldwide.',
+		],
+	},
+	{
+		icon: Users,
+		title: 'Trusted by Many',
+		description: [
+			'A reputation built on trust and client satisfaction.',
+		],
+	},
+	{
+		icon: Phone,
+		title: 'Always Available',
+		description: ['Dedicated support whenever you need it.'],
+	},
+];
+// Services Section Texts
+export const SERVICES_SECTION_TITLE = 'Our Services';
+export const SERVICES_SECTION_DESCRIPTION =
+	'We offer a complete range of financial solutions to help you grow and secure your future.';
+export const SERVICES_LIST = [
+	{
+		title: 'Mutual Funds',
+		description:
+			'Diversify your portfolio and achieve your long-term wealth goals.',
+	},
+	{
+		title: 'NPS',
+		description:
+			'Plan for a secure retirement with the National Pension System.',
+	},
+	{
+		title: 'Insurance',
+		description:
+			"Protect yourself and your loved ones from life's uncertainties.",
+	},
+	{
+		title: 'Bonds',
+		description:
+			'Invest in fixed-income securities for stable and predictable returns.',
+	},
+	{
+		title: 'PAN Card Services',
+		description: 'Assistance with all your PAN card related needs.',
+	},
+	{
+		title: 'Loan Against Securities',
+		description:
+			'Unlock the value of your investments for your liquidity needs.',
+	},
+];
 export const NAV_LINKS = [
 	{ label: 'Home', id: 'home' },
 	{ label: 'About', id: 'about' },

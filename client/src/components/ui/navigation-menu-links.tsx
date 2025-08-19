@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { Button } from './button';
+import { Button } from './buttons/button';
 import { NAV_LINKS } from '@/text';
 
 interface NavigationMenuProps {

@@ -45,6 +45,8 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 	--animate-aurora: aurora 8s ease-in-out infinite alternate;
+	--animate-gradient: gradient 8s linear infinite;
+	--animate-move: move 5s linear infinite;
 
 	@keyframes aurora {
     0% {
@@ -66,6 +68,21 @@
     100% {
       background-position: 0% 50%;
       transform: rotate(-5deg) scale(0.9);
+    }
+  }
+
+  @keyframes gradient {
+    to {
+      background-position: var(--bg-size, 300%) 0;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(-200px);
+    }
+    100% {
+      transform: translateX(200px);
     }
   }
 }

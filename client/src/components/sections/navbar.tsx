@@ -1,5 +1,5 @@
 import { Menu } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Button } from '../ui/buttons/button';
 import { NAV_LINKS } from '../../text';
 
 export default function NavBar() {
