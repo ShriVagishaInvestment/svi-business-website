@@ -1,4 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	CardTitle,
+} from '../ui/cards/card';
 import { TextHoverEffect } from '../ui/Texts/text-hover-effect';
 import React from 'react';
 

@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 import {
 	CARD_GRADIENTS,
-	getDarkerGradient,
+	// getDarkerGradient,
 } from './helper/card-gradients';
 
 export const WobbleCard = ({
