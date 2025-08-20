@@ -1,5 +1,7 @@
 import { Button } from '../ui/buttons/button';
 import { WavyBackground } from '../ui/backgrounds/wavy-background';
+// import RainbowButton from '../ui/buttons/rainbow-button';
+
 import {
 	HERO_TITLE,
 	HERO_SUBTITLE,
