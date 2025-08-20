@@ -16,7 +16,8 @@ const StatsSection = () => {
 					{stats.map((stat, index) => (
 						<BackgroundGradient
 							className='rounded-[22px] max-w-sm p-2 sm:p-4 bg-white/80 dark:bg-zinc-900'
-							key={index}>
+							key={index}
+							id={index}>
 							<AnimatedGradientText
 								speed={2}
 								className='text-5xl font-extrabold'>

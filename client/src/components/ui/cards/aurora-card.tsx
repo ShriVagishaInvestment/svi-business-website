@@ -6,26 +6,29 @@ export const BackgroundGradient = ({
 	children,
 	className,
 	containerClassName,
+	id = 0,
 }: {
 	children?: React.ReactNode;
 	className?: string;
 	containerClassName?: string;
+	id?: number;
 }) => {
-	// Simple random palette selection
 	const palettes = [
 		['#00ccb1', '#7b61ff', '#ffc414', '#1ca0fb', '#141316'],
 		['#ff6b6b', '#f7b801', '#6fffe9', '#355c7d', '#2a363b'],
 		['#43cea2', '#185a9d', '#f7971e', '#ffd200', '#f44369'],
 		['#ffb347', '#ffcc33', '#00b4d8', '#0077b6', '#023e8a'],
 	];
-	const palette =
-		palettes[Math.floor(Math.random() * palettes.length)];
+
+	const palette = palettes[id % palettes.length];
+
 	const gradient = `
 		radial-gradient(circle farthest-side at 0 100%,${palette[0]},transparent),
 		radial-gradient(circle farthest-side at 100% 0,${palette[1]},transparent),
 		radial-gradient(circle farthest-side at 100% 100%,${palette[2]},transparent),
 		radial-gradient(circle farthest-side at 0 0,${palette[3]},${palette[4]})
 	`;
+
 	return (
 		<div className={cn('relative p-[2px]', containerClassName)}>
 			<motion.div

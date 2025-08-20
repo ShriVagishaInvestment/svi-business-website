@@ -5,10 +5,12 @@ import { motion } from 'motion/react';
 export const TextHoverEffect = ({
 	text,
 	duration,
+	fontSize = 48,
 }: {
 	text: string;
 	duration?: number;
 	automatic?: boolean;
+	fontSize?: number;
 }) => {
 	const svgRef = useRef<SVGSVGElement>(null);
 	const [cursor, setCursor] = useState({ x: 0, y: 0 });
@@ -108,6 +110,7 @@ export const TextHoverEffect = ({
 					<text
 						key={i}
 						x='50%'
+						fontSize={fontSize}
 						y={40 + i * 48}
 						textAnchor='middle'
 						dominantBaseline='middle'
@@ -122,6 +125,7 @@ export const TextHoverEffect = ({
 					<motion.text
 						key={i}
 						x='50%'
+						fontSize={fontSize}
 						y={40 + i * 48}
 						textAnchor='middle'
 						dominantBaseline='middle'
@@ -147,6 +151,7 @@ export const TextHoverEffect = ({
 					<text
 						key={i}
 						x='50%'
+						fontSize={fontSize}
 						y={40 + i * 48}
 						textAnchor='middle'
 						dominantBaseline='middle'
@@ -160,6 +165,7 @@ export const TextHoverEffect = ({
 					<text
 						key={i}
 						x='50%'
+						fontSize={fontSize}
 						y={40 + i * 48}
 						textAnchor='middle'
 						dominantBaseline='middle'

@@ -77,7 +77,8 @@ export const NAV_LINKS = [
 ];
 
 // Hero Section Texts
-export const HERO_TITLE = 'Your Trusted Partner in Financial Growth';
+export const HERO_TITLE = 'Transform your';
+export const HERO_ROTATE = ['Finances', 'Life'];
 export const HERO_SUBTITLE =
 	'Decades of experience helping you secure your future through personalized financial solutions.';
 export const HERO_BOOK_BUTTON = 'Book a Consultation';
