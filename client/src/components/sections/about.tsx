@@ -8,7 +8,7 @@ const AboutSection = () => {
 	return (
 		<Vortex rangeY={200} particleCount={100}>
 			<div
-				className='flex mt-10 items-center justify-center h-auto w-full p-4'
+				className='flex mt-10 p-20 items-center justify-center h-auto w-full'
 				id='about'>
 				<SectionHeader
 					title={ABOUT_TITLE}

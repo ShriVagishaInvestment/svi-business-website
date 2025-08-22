@@ -10,6 +10,7 @@ import { IconSend } from '@tabler/icons-react';
 import { Toaster } from 'react-hot-toast';
 import { Label } from '../ui/label';
 import { Input } from '../ui/input';
+import { ShineBorder } from '../ui/cards/shine-border';
 import { SectionHeader } from '../ui/section-header';
 import { cn } from '@/lib/utils';
 
@@ -82,8 +83,11 @@ export default function ContactSection() {
 				description='connect with us and get to know more about our serives, we will contact you soon!!'
 			/>
 			{/* Form and Skills Side by Side */}
-			<motion.div className='gap-20 w-full max-w-xl mt-20'>
-				<div className='w-full p-2'>
+			<motion.div className='relative gap-20 w-full max-w-xl m-20'>
+				<div className='w-full p-2 rounded-2xl'>
+					<ShineBorder
+						shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']}
+					/>
 					<form
 						className='space-y-6 w-full'
 						ref={form}
@@ -93,7 +97,7 @@ export default function ContactSection() {
 							name='access_key'
 							value='12b19b40-9740-4064-b007-9c47ffcef47e'
 						/>
-						<div className='space-y-4'>
+						<div className='space-y-4 m-4'>
 							<LabelInputContainer>
 								<Label
 									htmlFor='fullname'

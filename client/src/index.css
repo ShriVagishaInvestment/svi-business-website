@@ -47,7 +47,10 @@
 	--animate-aurora: aurora 8s ease-in-out infinite alternate;
 	--animate-gradient: gradient 8s linear infinite;
 	--animate-move: move 5s linear infinite;
-	--animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+	--animate-shine: shine var(--duration) infinite linear;
+	--animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite
+    alternate;
+  	--animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
 
 	@keyframes aurora {
     0% {
@@ -87,12 +90,37 @@
     }
   }
 
-  @keyframes rainbow {
+  @keyframes shine {
     0% {
-      background-position: 0%;
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
+
+  @keyframes shimmer-slide {
+    to {
+      transform: translate(calc(100cqw - 100%), 0);
+    }
+  }
+  @keyframes spin-around {
+    0% {
+      transform: translateZ(0) rotate(0);
+    }
+    15%,
+    35% {
+      transform: translateZ(0) rotate(90deg);
+    }
+    65%,
+    85% {
+      transform: translateZ(0) rotate(270deg);
     }
     100% {
-      background-position: 200%;
+      transform: translateZ(0) rotate(360deg);
     }
   }
 }
@@ -128,12 +156,6 @@
 		--brand-light-gray: 248 249 250;
 		--text-primary: 17 19 23;
 		--text-secondary: 100 109 135;
-
-		--color-1: 0 100% 63%;
-		--color-2: 270 100% 63%;
-		--color-3: 210 100% 63%;
-		--color-4: 195 100% 63%;
-		--color-5: 90 100% 63%;
 	}
 
 	.dark {

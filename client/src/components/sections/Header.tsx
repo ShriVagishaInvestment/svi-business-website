@@ -1,6 +1,5 @@
-import { Button } from '../ui/buttons/button';
 import { WavyBackground } from '../ui/backgrounds/wavy-background';
-// import RainbowButton from '../ui/buttons/rainbow-button';
+import { ShimmerButton } from '../ui/buttons/shimmer-button';
 import { TextFlip } from '../ui/Texts/text-flip';
 
 import {
@@ -39,17 +38,14 @@ const Header = () => {
 								{HERO_SUBTITLE}
 							</p>
 							<div className='mt-8 flex flex-col sm:flex-row justify-center gap-4 lg:justify-start'>
-								<Button
-									onClick={() => scrollToSection('contact')}
-									className='w-full sm:w-auto transform rounded-lg bg-brand-gold px-6 py-3 text-base font-bold text-brand-navy shadow-lg transition-all duration-200 hover:scale-105 hover:bg-brand-gold/90'>
+								<ShimmerButton
+									onClick={() => scrollToSection('contact')}>
 									{HERO_BOOK_BUTTON}
-								</Button>
-								<Button
-									onClick={() => scrollToSection('services')}
-									variant='secondary'
-									className='w-full sm:w-auto transform rounded-lg bg-brand-white px-6 py-3 text-base font-bold text-brand-navy shadow-lg transition-all duration-200 hover:scale-105 hover:bg-brand-white/90'>
+								</ShimmerButton>
+								<ShimmerButton
+									onClick={() => scrollToSection('services')}>
 									{HERO_SERVICES_BUTTON}
-								</Button>
+								</ShimmerButton>
 							</div>
 						</div>
 					</div>
