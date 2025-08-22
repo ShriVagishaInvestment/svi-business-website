@@ -6,6 +6,7 @@ import AboutSection from './components/sections/about';
 import StatsSection from './components/sections/stats';
 import ServicesSection from './components/sections/services';
 import WhyUsSection from './components/sections/why-us';
+import ContactSection from './components/sections/contact';
 import Footer from './components/sections/footer';
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 			<StatsSection />
 			<ServicesSection />
 			<WhyUsSection />
+			<ContactSection />
 			<Footer />
 		</>
 	);
