@@ -1,5 +1,10 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React, {
+	useState,
+	useRef,
+	useEffect,
+	type FormEvent,
+} from 'react';
 import { motion } from 'framer-motion';
 import { IconSend } from '@tabler/icons-react';
 import { Toaster } from 'react-hot-toast';
@@ -28,7 +33,7 @@ export default function ContactSection() {
 	const [isSubmitting] = useState(false);
 	const [result, setResult] = useState('');
 
-	const form = useRef<HTMLFormElement | null>(null);
+	const form = useRef<HTMLFormElement>(null);
 
 	useEffect(() => {
 		if (result && result !== 'Sending....') {
@@ -40,13 +45,11 @@ export default function ContactSection() {
 		}
 	}, [result]);
 
-	const onSubmit = async (event: {
-		preventDefault: () => void;
-		target: HTMLFormElement | undefined;
-	}) => {
+	const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		setResult('Sending....');
-		const formData = new FormData(event.target);
+		const formElement = event.target as HTMLFormElement;
+		const formData = new FormData(formElement);
 
 		formData.append(
 			'access_key',
@@ -62,7 +65,7 @@ export default function ContactSection() {
 
 		if (data.success) {
 			setResult('Form Submitted Successfully');
-			event.target?.reset();
+			formElement.reset();
 		} else {
 			console.log('Error', data);
 			setResult(data.message);
