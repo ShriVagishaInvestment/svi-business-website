@@ -20,7 +20,6 @@ export const TextHoverEffect = ({
 		cy: '50%',
 	});
 
-	// Generate unique IDs for SVG elements per instance
 	const uniqueId = useId();
 	const gradientId = `textGradient-${uniqueId}`;
 	const revealMaskId = `revealMask-${uniqueId}`;

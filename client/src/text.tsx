@@ -2,8 +2,8 @@ export const CONTACT_FORM_TEXT = {
 	heading: 'Contact Us',
 	description:
 		'Connect with us and get to know more about our services, we will contact you soon!!',
-	accessKey: '12b19b40-9740-4064-b007-9c47ffcef47e',
-	apiUrl: 'https://api.web3forms.com/submit',
+	accessKey: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+	apiUrl: import.meta.env.VITE_WEB3FORMS_API_URL,
 	sending: 'Sending....',
 	success: 'Form Submitted Successfully',
 	button: 'Send Message',
@@ -112,10 +112,11 @@ import {
 	Facebook,
 	Instagram,
 	Twitter,
+	Linkedin,
 } from 'lucide-react';
 
 export const FOOTER_COMPANY = {
-	title: 'WealthWise',
+	title: 'Shri Vagisha Investments',
 	subtitle: 'Your trusted partner in financial growth.',
 };
 
@@ -133,8 +134,8 @@ export const FOOTER_CONTACT = {
 		{
 			icon: Phone,
 			label: 'Phone',
-			value: '+1 (555) 123-4567',
-			href: 'tel:+15551234567',
+			value: '+91 9826084116',
+			href: 'tel:+91 9826084116',
 		},
 		{
 			icon: Mail,
@@ -145,7 +146,7 @@ export const FOOTER_CONTACT = {
 		{
 			icon: MapPin,
 			label: 'Address',
-			value: '123 Financial St, Business District',
+			value: '253 jawahar nagar, rajendra nagar indore',
 			href: null,
 		},
 	],
@@ -155,26 +156,26 @@ export const FOOTER_SOCIAL = [
 	{
 		icon: Facebook,
 		label: 'Facebook',
-		href: 'https://facebook.com/wealthwise',
+		href: 'https://www.facebook.com/share/1Pq6DZ8YoL/',
 		color: 'hover:text-blue-500',
 	},
 	{
 		icon: Instagram,
 		label: 'Instagram',
-		href: 'https://instagram.com/wealthwise',
+		href: 'https://www.instagram.com/shrivagishainvestments._?igsh=OHc3azV2MnZpbWoz',
 		color: 'hover:text-pink-500',
 	},
 	{
-		icon: Twitter,
-		label: 'Twitter',
-		href: 'https://twitter.com/wealthwise',
+		icon: Linkedin,
+		label: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/ashish-mandloi-98012716?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
 		color: 'hover:text-blue-400',
 	},
 ];
 
 export const FOOTER_MAP = {
-	latitude: 40.7074,
-	longitude: -74.0113,
+	latitude: 22.66824907964717,
+	longitude: 75.82437908265574,
 	get iframeSrc() {
 		const { latitude, longitude } = this;
 		return `https://www.openstreetmap.org/export/embed.html?bbox=${
@@ -227,8 +228,13 @@ export const WHY_US_REASONS = [
 ];
 // Services Section Texts
 export const SERVICES_SECTION_TITLE = 'Our Services';
-export const SERVICES_SECTION_DESCRIPTION =
-	'We offer a complete range of financial solutions to help you grow and secure your future.';
+export const SERVICES_SECTION_DESCRIPTION = [
+	'At Shri Vagisha Investments, we provide simple and reliable financial solutions that help you secure your present and plan for a better future. From smart investments and tax-saving options to insurance, retirement, and wealth planning we cover everything you need to manage money with confidence.',
+
+	'Our approach is easy to understand, transparent, and tailored to your goals. Whether you’re just starting your financial journey or looking to grow and protect your wealth, we are here to guide you every step of the way.',
+
+	'With us, financial planning is not complicated it’s about making the right choices today for a stress-free tomorrow.',
+];
 export const SERVICES_LIST = [
 	{
 		title: 'Mutual Funds',
@@ -280,5 +286,12 @@ export const HERO_IMAGE_ALT =
 
 // About Section Texts
 export const ABOUT_TITLE = 'About Us';
-export const ABOUT_DESCRIPTION =
-	'At WealthWise, we have a rich history of providing tailored financial guidance. Our core values revolve around integrity, client-centricity, and a commitment to long-term success.';
+export const ABOUT_DESCRIPTION = [
+	'We’re financial experts who care about one thing: helping you make the most of your money. Whether you want to save for the future, invest wisely, or plan your retirement, we’re here to guide you every step of the way.',
+
+	'We know that managing money can feel complicated or overwhelming, so we focus on making it simple and personal. We listen to what matters to you and build a plan that fits your life.',
+
+	'Think of us as your trusted financial partner working with you, answering your questions, and helping you reach your goals with confidence.',
+
+	'Because at the end of the day, it’s not just about numbers it’s about your dreams and your future.',
+];
