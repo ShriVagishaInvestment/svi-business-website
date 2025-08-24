@@ -111,7 +111,6 @@ import {
 	MapPin,
 	Facebook,
 	Instagram,
-	Twitter,
 	Linkedin,
 } from 'lucide-react';
 
