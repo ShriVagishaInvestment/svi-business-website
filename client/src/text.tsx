@@ -1,4 +1,89 @@
-import { User, TrendingUp, Users, Phone } from 'lucide-react';
+import {
+	Phone,
+	Mail,
+	MapPin,
+	Facebook,
+	Instagram,
+	Twitter,
+} from 'lucide-react';
+
+export const FOOTER_COMPANY = {
+	title: 'WealthWise',
+	subtitle: 'Your trusted partner in financial growth.',
+};
+
+export const FOOTER_LINKS = [
+	{ label: 'Home', id: 'home' },
+	{ label: 'About', id: 'about' },
+	{ label: 'Services', id: 'services' },
+	{ label: 'Why us', id: 'why-us' },
+	{ label: 'Contact', id: 'contact' },
+];
+
+export const FOOTER_CONTACT = {
+	title: 'Contact Us',
+	contacts: [
+		{
+			icon: Phone,
+			label: 'Phone',
+			value: '+1 (555) 123-4567',
+			href: 'tel:+15551234567',
+		},
+		{
+			icon: Mail,
+			label: 'Email',
+			value: 'info@wealthwise.com',
+			href: 'mailto:info@wealthwise.com',
+		},
+		{
+			icon: MapPin,
+			label: 'Address',
+			value: '123 Financial St, Business District',
+			href: null,
+		},
+	],
+};
+
+export const FOOTER_SOCIAL = [
+	{
+		icon: Facebook,
+		label: 'Facebook',
+		href: 'https://facebook.com/wealthwise',
+		color: 'hover:text-blue-500',
+	},
+	{
+		icon: Instagram,
+		label: 'Instagram',
+		href: 'https://instagram.com/wealthwise',
+		color: 'hover:text-pink-500',
+	},
+	{
+		icon: Twitter,
+		label: 'Twitter',
+		href: 'https://twitter.com/wealthwise',
+		color: 'hover:text-blue-400',
+	},
+];
+
+export const FOOTER_MAP = {
+	latitude: 40.7074,
+	longitude: -74.0113,
+	get iframeSrc() {
+		const { latitude, longitude } = this;
+		return `https://www.openstreetmap.org/export/embed.html?bbox=${
+			longitude - 0.01
+		},${latitude - 0.01},${longitude + 0.01},${
+			latitude + 0.01
+		}&layer=mapnik&marker=${latitude},${longitude}`;
+	},
+};
+
+export const FOOTER_COPYRIGHT = {
+	copyright: '© 2025 WealthWise. All Rights Reserved.',
+	designedBy: 'Designed & Developed by ',
+	developer: 'Your Developer Name',
+};
+import { User, TrendingUp, Users } from 'lucide-react';
 
 // Why Us Section Texts
 export const WHY_US_SECTION_TITLE = 'Why Clients Trust Us';
