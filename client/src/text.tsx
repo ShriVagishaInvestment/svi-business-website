@@ -249,8 +249,8 @@ export const FOOTER_CONTACT = {
 		{
 			icon: Mail,
 			label: 'Email',
-			value: 'info@wealthwise.com',
-			href: 'mailto:info@wealthwise.com',
+			value: 'shrivagishainvestment.work@gmail.com',
+			href: 'mailto:shrivagishainvestment.work@gmail.com',
 		},
 		{
 			icon: MapPin,
