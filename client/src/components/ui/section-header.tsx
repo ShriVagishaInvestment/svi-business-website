@@ -21,12 +21,12 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 			description.map((desc, idx) => (
 				<p
 					key={idx}
-					className='mt-8 text-lg md:text-xl lg:text-2xl text-text-secondary mx-auto leading-relaxed max-w-5xl text-center'>
+					className='mt-4 text-sm md:text-lg lg:text-xl text-text-secondary mx-auto leading-relaxed max-w-5xl text-center'>
 					{desc}
 				</p>
 			))
 		) : (
-			<p className='mt-8 text-lg md:text-xl lg:text-2xl text-text-secondary mx-auto leading-relaxed max-w-5xl text-center'>
+			<p className='mt-4 text-sm md:text-lg lg:text-xl text-text-secondary mx-auto leading-relaxed max-w-5xl text-center'>
 				{description}
 			</p>
 		)}

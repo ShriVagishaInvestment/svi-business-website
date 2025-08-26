@@ -54,7 +54,7 @@ const ContactInfo = ({
 						rel='noopener noreferrer'
 						className={`opacity-70 hover:opacity-100 transition-all ${social.color}`}
 						aria-label={social.label}>
-						<span className='flex gap-2 py-2'>
+						<span className='flex gap-2 py-2 items-center justify-center sm:justify-start'>
 							{social.label} <IconComponent size={20} />
 						</span>
 					</a>

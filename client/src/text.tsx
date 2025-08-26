@@ -1,3 +1,112 @@
+import { User, TrendingUp, Users } from 'lucide-react';
+
+export const COMPANY_NAME = 'Shri Vagisha Investments';
+
+export const NAV_LINKS = [
+	{ label: 'Home', id: 'home' },
+	{ label: 'About', id: 'about' },
+	{ label: 'Services', id: 'services' },
+	{ label: 'Why Choose Us', id: 'why-us' },
+	{ label: 'Contact', id: 'contact' },
+];
+
+// Hero Section Texts
+export const HERO_TITLE = 'Transform your';
+export const HERO_ROTATE = ['Finances', 'Life'];
+export const HERO_SUBTITLE =
+	'Decades of experience helping you secure your future through personalized financial solutions.';
+export const HERO_BOOK_BUTTON = 'Book a Consultation';
+export const HERO_SERVICES_BUTTON = 'Explore Services';
+export const HERO_IMAGE_ALT =
+	'Financial advisor with charts illustration';
+
+// About Section Texts
+export const ABOUT_TITLE = 'About Us';
+export const ABOUT_DESCRIPTION = [
+	'We’re financial experts who care about one thing - helping you make the most of your money. Whether you want to save for the future, invest wisely, or plan your retirement, we’re here to guide you every step of the way.',
+
+	'We know that managing money can feel complicated or overwhelming, so we focus on making it simple and personal. We listen to what matters to you and build a plan that fits your life.',
+
+	'Think of us as your trusted financial partner working with you, answering your questions, and helping you reach your goals with confidence.',
+
+	'Because at the end of the day, it’s not just about numbers it’s about your dreams and your future.',
+];
+
+// Services Section Texts
+export const SERVICES_SECTION_TITLE = 'Our Services';
+export const SERVICES_SECTION_DESCRIPTION = [
+	`At ${COMPANY_NAME}, we provide simple and reliable financial solutions that help you secure your present and plan for a better future. From smart investments and tax-saving options to insurance, retirement, and wealth planning we cover everything you need to manage money with confidence.`,
+
+	'Our approach is easy to understand, transparent, and tailored to your goals. Whether you’re just starting your financial journey or looking to grow and protect your wealth, we are here to guide you every step of the way.',
+
+	'With us, financial planning is not complicated it’s about making the right choices today for a stress-free tomorrow.',
+];
+export const SERVICES_LIST = [
+	{
+		title: 'Mutual Funds',
+		description:
+			'Diversify your portfolio and achieve your long-term wealth goals.',
+	},
+	{
+		title: 'NPS',
+		description:
+			'Plan for a secure retirement with the National Pension System.',
+	},
+	{
+		title: 'Insurance',
+		description:
+			"Protect yourself and your loved ones from life's uncertainties.",
+	},
+	{
+		title: 'Bonds',
+		description:
+			'Invest in fixed-income securities for stable and predictable returns.',
+	},
+	{
+		title: 'PAN Card Services',
+		description: 'Assistance with all your PAN card related needs.',
+	},
+	{
+		title: 'Loan Against Securities',
+		description:
+			'Unlock the value of your investments for your liquidity needs.',
+	},
+];
+
+// Why Us Section Texts
+export const WHY_US_SECTION_TITLE = 'Why Clients Trust Us';
+export const WHY_US_SECTION_SUBTITLE =
+	'Hover over each card to discover what makes us different';
+export const WHY_US_REASONS = [
+	{
+		icon: User,
+		title: 'Personalized Advice',
+		description: [
+			'Tailored strategies for your unique financial goals.',
+		],
+	},
+	{
+		icon: TrendingUp,
+		title: 'Proven Track Record',
+		description: [
+			'Consistent success in helping clients achieve their goals.',
+			'Trusted by hundreds of satisfied clients worldwide.',
+		],
+	},
+	{
+		icon: Users,
+		title: 'Trusted by Many',
+		description: [
+			'A reputation built on trust and client satisfaction.',
+		],
+	},
+	{
+		icon: Phone,
+		title: 'Always Available',
+		description: ['Dedicated support whenever you need it.'],
+	},
+];
+//Contact
 export const CONTACT_FORM_TEXT = {
 	heading: 'Contact Us',
 	description:
@@ -51,8 +160,7 @@ export const CONTACT_FORM_TEXT = {
 			label: 'Message',
 			labelClass:
 				'text-sm font-medium text-gray-700 dark:text-gray-300',
-			placeholder:
-				'Tell me about your project or how we can collaborate....',
+			placeholder: 'Tell us more about the required assistance',
 			type: 'textarea',
 			name: 'message',
 			textareaClass:
@@ -105,6 +213,8 @@ export const CONTACT_FORM_TEXT = {
 		</div>
 	),
 };
+
+//Footer
 import {
 	Phone,
 	Mail,
@@ -115,7 +225,7 @@ import {
 } from 'lucide-react';
 
 export const FOOTER_COMPANY = {
-	title: 'Shri Vagisha Investments',
+	title: { COMPANY_NAME },
 	subtitle: 'Your trusted partner in financial growth.',
 };
 
@@ -186,111 +296,8 @@ export const FOOTER_MAP = {
 };
 
 export const FOOTER_COPYRIGHT = {
-	copyright: '© 2025 WealthWise. All Rights Reserved.',
+	copyright: `©2025 ${COMPANY_NAME}. All Rights Reserved.`,
 	designedBy: 'Designed & Developed by ',
-	developer: 'Your Developer Name',
+	developer: 'Utkarsh Mandloi',
+	developerGithub: 'https://github.com/utkarshm12',
 };
-import { User, TrendingUp, Users } from 'lucide-react';
-
-// Why Us Section Texts
-export const WHY_US_SECTION_TITLE = 'Why Clients Trust Us';
-export const WHY_US_SECTION_SUBTITLE =
-	'Hover over each card to discover what makes us different';
-export const WHY_US_REASONS = [
-	{
-		icon: User,
-		title: 'Personalized Advice',
-		description: [
-			'Tailored strategies for your unique financial goals.',
-		],
-	},
-	{
-		icon: TrendingUp,
-		title: 'Proven Track Record',
-		description: [
-			'Consistent success in helping clients achieve their goals.',
-			'Trusted by hundreds of satisfied clients worldwide.',
-		],
-	},
-	{
-		icon: Users,
-		title: 'Trusted by Many',
-		description: [
-			'A reputation built on trust and client satisfaction.',
-		],
-	},
-	{
-		icon: Phone,
-		title: 'Always Available',
-		description: ['Dedicated support whenever you need it.'],
-	},
-];
-// Services Section Texts
-export const SERVICES_SECTION_TITLE = 'Our Services';
-export const SERVICES_SECTION_DESCRIPTION = [
-	'At Shri Vagisha Investments, we provide simple and reliable financial solutions that help you secure your present and plan for a better future. From smart investments and tax-saving options to insurance, retirement, and wealth planning we cover everything you need to manage money with confidence.',
-
-	'Our approach is easy to understand, transparent, and tailored to your goals. Whether you’re just starting your financial journey or looking to grow and protect your wealth, we are here to guide you every step of the way.',
-
-	'With us, financial planning is not complicated it’s about making the right choices today for a stress-free tomorrow.',
-];
-export const SERVICES_LIST = [
-	{
-		title: 'Mutual Funds',
-		description:
-			'Diversify your portfolio and achieve your long-term wealth goals.',
-	},
-	{
-		title: 'NPS',
-		description:
-			'Plan for a secure retirement with the National Pension System.',
-	},
-	{
-		title: 'Insurance',
-		description:
-			"Protect yourself and your loved ones from life's uncertainties.",
-	},
-	{
-		title: 'Bonds',
-		description:
-			'Invest in fixed-income securities for stable and predictable returns.',
-	},
-	{
-		title: 'PAN Card Services',
-		description: 'Assistance with all your PAN card related needs.',
-	},
-	{
-		title: 'Loan Against Securities',
-		description:
-			'Unlock the value of your investments for your liquidity needs.',
-	},
-];
-export const NAV_LINKS = [
-	{ label: 'Home', id: 'home' },
-	{ label: 'About', id: 'about' },
-	{ label: 'Services', id: 'services' },
-	{ label: 'Why Choose Us', id: 'why-us' },
-	{ label: 'Contact', id: 'contact' },
-];
-
-// Hero Section Texts
-export const HERO_TITLE = 'Transform your';
-export const HERO_ROTATE = ['Finances', 'Life'];
-export const HERO_SUBTITLE =
-	'Decades of experience helping you secure your future through personalized financial solutions.';
-export const HERO_BOOK_BUTTON = 'Book a Consultation';
-export const HERO_SERVICES_BUTTON = 'Explore Services';
-export const HERO_IMAGE_ALT =
-	'Financial advisor with charts illustration';
-
-// About Section Texts
-export const ABOUT_TITLE = 'About Us';
-export const ABOUT_DESCRIPTION = [
-	'We’re financial experts who care about one thing: helping you make the most of your money. Whether you want to save for the future, invest wisely, or plan your retirement, we’re here to guide you every step of the way.',
-
-	'We know that managing money can feel complicated or overwhelming, so we focus on making it simple and personal. We listen to what matters to you and build a plan that fits your life.',
-
-	'Think of us as your trusted financial partner working with you, answering your questions, and helping you reach your goals with confidence.',
-
-	'Because at the end of the day, it’s not just about numbers it’s about your dreams and your future.',
-];

@@ -1,8 +1,9 @@
+import { COMPANY_NAME } from '@/text';
 type Link = { label: string; id: string };
 
 const CompanyInfo = ({ links }: { links: Link[] }) => (
 	<div>
-		<h3 className='text-xl font-bold'>WealthWise</h3>
+		<h3 className='text-xl font-bold'>{COMPANY_NAME}</h3>
 		<p className='mt-2 text-sm opacity-70 pb-4'>
 			Your trusted partner in financial growth.
 		</p>

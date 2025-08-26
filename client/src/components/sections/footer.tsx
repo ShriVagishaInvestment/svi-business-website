@@ -7,10 +7,10 @@ import {
 	FOOTER_MAP,
 	FOOTER_COPYRIGHT,
 } from '../../text.tsx';
-import CompanyInfo from './footer/CompanyInfo.tsx';
-import ContactInfo from './footer/ContactInfo.tsx';
-import MapSection from './footer/MapSection.tsx';
-import Copyright from './footer/Copyright.tsx';
+import CompanyInfo from '../ui/footer/CompanyInfo.tsx';
+import ContactInfo from '../ui/footer/ContactInfo.tsx';
+import MapSection from '../ui/footer/MapSection.tsx';
+import Copyright from '../ui/footer/Copyright.tsx';
 
 const Footer = () => (
 	<footer className='bg-brand-navy dark:bg-black/50 text-brand-white'>
