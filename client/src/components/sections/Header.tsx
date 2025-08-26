@@ -8,7 +8,6 @@ import {
 	HERO_TITLE,
 	HERO_ROTATE,
 	HERO_SUBTITLE,
-	HERO_BOOK_BUTTON,
 	HERO_SERVICES_BUTTON,
 	// HERO_IMAGE_ALT,
 } from '../../text';
@@ -40,10 +39,6 @@ const Header = () => {
 								{HERO_SUBTITLE}
 							</p>
 							<div className='mt-8 flex flex-col sm:flex-row justify-center gap-4 lg:justify-start'>
-								{/* <ShimmerButton
-									onClick={() => scrollToSection('contact')}>
-									{HERO_BOOK_BUTTON}
-								</ShimmerButton> */}
 								<ShimmerButton
 									onClick={() => scrollToSection('services')}>
 									{HERO_SERVICES_BUTTON}
