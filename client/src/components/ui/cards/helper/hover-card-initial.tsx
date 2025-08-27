@@ -5,7 +5,7 @@ interface HoverCardInitialProps {
 	title: string;
 	gradient: string;
 	color?: string;
-	isVisible: boolean; // New prop to control visibility
+	isVisible: boolean;
 }
 
 const HoverCardInitial: React.FC<HoverCardInitialProps> = ({

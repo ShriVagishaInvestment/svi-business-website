@@ -5,11 +5,10 @@ interface HoverCardHoveredProps {
 	title: string;
 	description: string[];
 	gradient: string;
-	isVisible: boolean; // New prop to control visibility
+	isVisible: boolean;
 }
 
 const HoverCardHovered: React.FC<HoverCardHoveredProps> = ({
-	// title,
 	description,
 	gradient,
 	isVisible,
@@ -24,9 +23,6 @@ const HoverCardHovered: React.FC<HoverCardHoveredProps> = ({
 			style={{ background: gradient, opacity: 0.2, zIndex: 0 }}
 		/>
 		<div className='relative z-10'>
-			{/* <h3 className='text-2xl font-bold mb-4 text-center text-white/90'>
-				<Aurora>{title}</Aurora>
-			</h3> */}
 			<div className='space-y-3'>
 				{description.map((point, index) => (
 					<p

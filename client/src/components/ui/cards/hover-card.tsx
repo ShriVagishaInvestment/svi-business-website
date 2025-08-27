@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import HoverCardInitial from './helper/hover-card-initial';
 import HoverCardHovered from './helper/hover-card-hovered';
 
@@ -10,6 +10,24 @@ interface HoverCardProps {
 	color?: string;
 }
 
+const useMediaQuery = (query: string) => {
+	const [matches, setMatches] = useState(false);
+
+	useEffect(() => {
+		const media = window.matchMedia(query);
+		if (media.matches !== matches) {
+			setMatches(media.matches);
+		}
+		const listener = () => {
+			setMatches(media.matches);
+		};
+		media.addEventListener('change', listener);
+		return () => media.removeEventListener('change', listener);
+	}, [matches, query]);
+
+	return matches;
+};
+
 const HoverCard = ({
 	icon,
 	title,
@@ -18,21 +36,24 @@ const HoverCard = ({
 	color,
 }: HoverCardProps) => {
 	const [isFlipped, setIsFlipped] = useState(false);
-	const [isHovered, setIsHovered] = useState(false);
-
-	// Combined state for both hover and click
-	const showFlippedState = isFlipped || isHovered;
+	const isDesktop = useMediaQuery('(min-width: 768px)');
 
 	const handleClick = () => {
-		setIsFlipped(!isFlipped);
+		if (!isDesktop) {
+			setIsFlipped(prev => !prev);
+		}
 	};
 
 	const handleMouseEnter = () => {
-		setIsHovered(true);
+		if (isDesktop) {
+			setIsFlipped(true);
+		}
 	};
 
 	const handleMouseLeave = () => {
-		setIsHovered(false);
+		if (isDesktop) {
+			setIsFlipped(false);
+		}
 	};
 
 	return (
@@ -41,26 +62,24 @@ const HoverCard = ({
 			onClick={handleClick}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}>
-			{/* Initial state - visible when not flipped */}
 			<div
 				className={`absolute inset-0 transition-all duration-500 ${
-					showFlippedState
-						? 'opacity-0 transform translate-y-full scale-95'
-						: 'opacity-100 transform translate-y-0 scale-100'
+					isFlipped
+						? 'opacity-0 transform -translate-y-full'
+						: 'opacity-100 transform translate-y-0'
 				}`}>
 				<HoverCardInitial
 					icon={icon}
 					title={title}
 					gradient={gradient}
 					color={color}
-					isVisible={!showFlippedState}
+					isVisible={!isFlipped}
 				/>
 			</div>
 
-			{/* Hovered/Flipped state - visible when flipped */}
 			<div
 				className={`absolute inset-0 transition-all duration-500 ${
-					showFlippedState
+					isFlipped
 						? 'opacity-100 transform translate-y-0'
 						: 'opacity-0 transform translate-y-full'
 				}`}>
@@ -68,7 +87,7 @@ const HoverCard = ({
 					title={title}
 					description={description}
 					gradient={gradient}
-					isVisible={showFlippedState}
+					isVisible={isFlipped}
 				/>
 			</div>
 		</div>
