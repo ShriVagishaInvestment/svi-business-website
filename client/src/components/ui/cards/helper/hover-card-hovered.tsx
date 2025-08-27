@@ -5,15 +5,19 @@ interface HoverCardHoveredProps {
 	title: string;
 	description: string[];
 	gradient: string;
+	isVisible: boolean; // New prop to control visibility
 }
 
 const HoverCardHovered: React.FC<HoverCardHoveredProps> = ({
 	// title,
 	description,
 	gradient,
+	isVisible,
 }) => (
 	<div
-		className='absolute inset-0 flex flex-col justify-center p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500'
+		className={`absolute inset-0 flex flex-col justify-center p-6 text-white transition-opacity duration-500 ${
+			isVisible ? 'opacity-100' : 'opacity-0'
+		}`}
 		style={{ position: 'absolute' }}>
 		<div
 			className='absolute inset-0 w-full h-full rounded-xl pointer-events-none'

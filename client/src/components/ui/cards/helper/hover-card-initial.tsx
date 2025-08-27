@@ -5,6 +5,7 @@ interface HoverCardInitialProps {
 	title: string;
 	gradient: string;
 	color?: string;
+	isVisible: boolean; // New prop to control visibility
 }
 
 const HoverCardInitial: React.FC<HoverCardInitialProps> = ({
@@ -12,8 +13,12 @@ const HoverCardInitial: React.FC<HoverCardInitialProps> = ({
 	title,
 	gradient,
 	color,
+	isVisible,
 }) => (
-	<div className='absolute inset-0 flex flex-col items-center justify-center p-6 transition-all duration-500 group-hover:opacity-0 group-hover:scale-95'>
+	<div
+		className={`absolute inset-0 flex flex-col items-center justify-center p-6 transition-all duration-500 ${
+			isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+		}`}>
 		<div className='flex h-16 w-16 items-center justify-center mb-4'>
 			<Icon className='h-8 w-8' style={color ? { color } : {}} />
 		</div>
