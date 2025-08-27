@@ -43,7 +43,7 @@ export default function NavBar() {
 						alt='Company Logo'
 						className='h-8 sm:h-12 w-20 sm:w-30 object-cover'
 					/>
-					<h2 className='text-xl font-bold tracking-tight'>
+					<h2 className='text-lg sm:text-xl font-bold tracking-tight'>
 						{COMPANY_NAME}
 					</h2>
 				</div>

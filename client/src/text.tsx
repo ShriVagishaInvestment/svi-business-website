@@ -122,13 +122,12 @@ export const CONTACT_FORM_TEXT = {
 		{
 			id: 'fullname',
 			label: 'Full Name',
-			labelClass:
-				'text-sm font-medium text-gray-700 dark:text-gray-300',
+			labelClass: 'text-sm font-medium',
 			placeholder: 'John Doe',
 			type: 'text',
 			name: 'user_name',
 			inputClass:
-				'w-full focus-ring bg-white dark:bg-black border-white dark:border-white text-white placeholder-gray-400 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300',
+				'w-full focus-ring bg-white dark:bg-black border-white dark:border-white text-black dark:text-white placeholder-gray-400 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300',
 			required: true,
 		},
 		{
@@ -140,7 +139,7 @@ export const CONTACT_FORM_TEXT = {
 			type: 'email',
 			name: 'user_email',
 			inputClass:
-				'w-full focus-ring bg-white dark:bg-black border-white dark:border-white text-white placeholder-gray-400 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300',
+				'w-full focus-ring bg-white dark:bg-black border-white dark:border-white text-black dark:text-white placeholder-gray-400 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300',
 			required: true,
 		},
 		{
@@ -152,7 +151,7 @@ export const CONTACT_FORM_TEXT = {
 			type: 'tel',
 			name: 'user_phone',
 			inputClass:
-				'w-full focus-ring bg-white dark:bg-black border-white dark:border-white text-white placeholder-gray-400 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300',
+				'w-full focus-ring bg-white dark:bg-black border-white dark:border-white text-black dark:text-white dark:text-white placeholder-gray-400 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300',
 			required: false,
 		},
 		{
@@ -257,6 +256,12 @@ export const FOOTER_CONTACT = {
 			label: 'Address',
 			value: '253 jawahar nagar, rajendra nagar indore',
 			href: null,
+		},
+		{
+			icon: Phone,
+			label: 'WhatsApp',
+			value: 'Chat on WhatsApp',
+			href: 'https://wa.me/919826084116',
 		},
 	],
 };
