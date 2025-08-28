@@ -1,3 +1,4 @@
+import { IconBrandWhatsapp } from '@tabler/icons-react';
 import { User, TrendingUp, Users } from 'lucide-react';
 
 export const COMPANY_NAME = 'Shri Vagisha Investments';
@@ -76,7 +77,7 @@ export const SERVICES_LIST = [
 // Why Us Section Texts
 export const WHY_US_SECTION_TITLE = 'Why Clients Trust Us';
 export const WHY_US_SECTION_SUBTITLE =
-	'Hover over each card to discover what makes us different';
+	'We make finance simple, personal, and trustworthy. With years of experience and a focus on your needs, we’re here to guide you every step of the way.';
 export const WHY_US_REASONS = [
 	{
 		icon: User,
@@ -106,11 +107,19 @@ export const WHY_US_REASONS = [
 		description: ['Dedicated support whenever you need it.'],
 	},
 ];
+
+// Stats Section
+export const STATS_DATA = [
+	{ number: 20, suffix: '+', label: 'Years Experience' },
+	{ number: 400, suffix: '+', label: 'Happy Clients' },
+	{ number: 95, suffix: '%', label: 'Retention Rate' },
+];
+
 //Contact
 export const CONTACT_FORM_TEXT = {
 	heading: 'Contact Us',
 	description:
-		'Connect with us and get to know more about our services, we will contact you soon!!',
+		'We’re here to help you make the right financial decisions with confidence. Whether you want to learn more about our services, book a consultation, or simply have a question, feel free to reach out.',
 	accessKey: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
 	apiUrl: import.meta.env.VITE_WEB3FORMS_API_URL,
 	sending: 'Sending....',
@@ -257,33 +266,33 @@ export const FOOTER_CONTACT = {
 			value: '253 jawahar nagar, rajendra nagar indore',
 			href: null,
 		},
-		{
-			icon: Phone,
-			label: 'WhatsApp',
-			value: 'Chat on WhatsApp',
-			href: 'https://wa.me/919826084116',
-		},
 	],
 };
 
 export const FOOTER_SOCIAL = [
 	{
+		icon: IconBrandWhatsapp,
+		label: 'WhatsApp',
+		href: 'https://wa.me/919826084116',
+		color: 'text-green-500 hover:text-green-400',
+	},
+	{
 		icon: Facebook,
 		label: 'Facebook',
 		href: 'https://www.facebook.com/share/1Pq6DZ8YoL/',
-		color: 'hover:text-blue-500',
+		color: 'text-blue-600 hover:text-blue-500',
 	},
 	{
 		icon: Instagram,
 		label: 'Instagram',
 		href: 'https://www.instagram.com/shrivagishainvestments._?igsh=OHc3azV2MnZpbWoz',
-		color: 'hover:text-pink-500',
+		color: 'text-pink-600 hover:text-pink-500',
 	},
 	{
 		icon: Linkedin,
 		label: 'LinkedIn',
 		href: 'https://www.linkedin.com/in/ashish-mandloi-98012716?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-		color: 'hover:text-blue-400',
+		color: 'text-blue-500 hover:text-blue-400',
 	},
 ];
 

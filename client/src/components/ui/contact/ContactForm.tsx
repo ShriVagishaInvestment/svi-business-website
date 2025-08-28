@@ -5,7 +5,7 @@ import { Label } from '../label';
 import { Input } from '../input';
 import { ShineBorder } from '../cards/shine-border';
 import LabelInputContainer from './LabelInputContainer';
-import { CONTACT_FORM_TEXT } from '@/text';
+import { CONTACT_FORM_TEXT, FOOTER_SOCIAL } from '@/text';
 
 const ContactForm = () => {
 	const [isSubmitting] = useState(false);
@@ -96,6 +96,27 @@ const ContactForm = () => {
 				</button>
 				{result && CONTACT_FORM_TEXT.renderResult(result)}
 				<Toaster position='top-right' />
+				<div className='flex items-center justify-center space-x-2'>
+					<div className='flex-grow border-t border-gray-300 dark:border-gray-600'></div>
+					<span className='flex-shrink text-sm text-gray-500 dark:text-gray-400'>
+						Or connect with us on
+					</span>
+					<div className='flex-grow border-t border-gray-300 dark:border-gray-600'></div>
+				</div>
+
+				<div className='flex justify-center gap-6'>
+					{FOOTER_SOCIAL.map(social => (
+						<a
+							key={social.label}
+							href={social.href}
+							target='_blank'
+							rel='noopener noreferrer'
+							aria-label={social.label}
+							className={`transition-transform duration-300 hover:scale-125 ${social.color}`}>
+							<social.icon className='h-6 w-6' />
+						</a>
+					))}
+				</div>
 			</form>
 		</div>
 	);
