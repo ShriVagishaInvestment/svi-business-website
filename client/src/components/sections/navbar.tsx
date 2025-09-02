@@ -37,25 +37,25 @@ export default function NavBar() {
 		<header className='fixed top-0 left-0 z-50 w-full backdrop-blur-xs bg-white/90 dark:bg-gray-900/90 shadow-sm border-b border-gray-200/20 dark:border-gray-800/20 transition-all duration-300'>
 			<div className='flex items-center justify-between px-6 md:px-10 py-2'>
 				{/* Logo */}
-				<div className='flex items-center gap-3 text-brand-navy dark:text-brand-white'>
+				<div className='flex items-center gap-2 text-brand-navy dark:text-brand-white'>
 					<img
 						src='/company-logo.png'
 						alt='Company Logo'
-						className='h-8 sm:h-12 w-20 sm:w-30 object-cover'
+						className='h-4 sm:h-8 w-12 sm:w-24 object-cover'
 					/>
-					<h2 className='text-lg sm:text-xl font-bold tracking-tight'>
+					<h2 className='text-xs sm:text-lg font-bold tracking-tight'>
 						{COMPANY_NAME}
 					</h2>
 				</div>
 
 				{/* Desktop Navigation */}
-				<nav className='hidden md:flex items-center gap-8'>
+				<nav className='hidden md:flex items-center gap-2'>
 					{NAV_LINKS.map(item => (
 						<Button
 							key={item.id}
 							variant='link'
 							onClick={() => scrollToSection(item.id)}
-							className='text-sm font-medium text-muted-foreground hover:text-brand-gold transition-colors'>
+							className='text-sm font-medium text-muted-foreground transition-colors'>
 							{item.label}
 						</Button>
 					))}
