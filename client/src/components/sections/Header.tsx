@@ -9,6 +9,7 @@ import {
 	HERO_ROTATE,
 	HERO_SUBTITLE,
 	HERO_SERVICES_BUTTON,
+	HERO_BOOK_BUTTON,
 } from '../../text';
 
 const Header = () => {
@@ -36,10 +37,15 @@ const Header = () => {
 							<p className='text-black mt-4 text-base font-light text-brand-white opacity-90 md:text-lg lg:text-xl leading-relaxed'>
 								{HERO_SUBTITLE}
 							</p>
-							<div className='mt-8 flex flex-col sm:flex-row justify-center gap-4 lg:justify-start'>
+							<div className='mt-8 flex flex-row sm:flex-row justify-center gap-4 lg:justify-start'>
 								<ShimmerButton
 									onClick={() => scrollToSection('services')}>
 									{HERO_SERVICES_BUTTON}
+								</ShimmerButton>
+								<ShimmerButton
+									onClick={() => scrollToSection('contact')}
+									className='md:hidden'>
+									{HERO_BOOK_BUTTON}
 								</ShimmerButton>
 							</div>
 						</div>
