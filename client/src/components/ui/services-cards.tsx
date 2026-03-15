@@ -4,7 +4,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from './cards/card';
-import { TextHoverEffect } from './Texts/text-hover-effect';
 import React from 'react';
 
 export interface Service {
@@ -23,11 +22,11 @@ export const ServicesCards: React.FC<ServicesCardsProps> = ({
 		{services.map((service, index) => (
 			<Card
 				key={index}
-				className='text-center border-black/20 relative'>
-				<span className='pointer-events-none absolute inset-0 z-0 rounded-3xl opacity-0 group-hover:opacity-10 group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:via-blue-500 group-hover:to-purple-500 group-hover:blur-sm transition-all duration-300' />
+				className='text-center border-black/20 relative hover:shadow-xl hover:scale-[1.02] transition-all duration-300'>
+				<span className='pointer-events-none absolute inset-0 z-0 rounded-xl bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 blur-sm opacity-0 group-hover:opacity-15 transition-opacity duration-300' />
 				<CardHeader>
-					<CardTitle className='text-5xl text-center whitespace-normal break-words leading-tight'>
-						<TextHoverEffect text={service.title} />
+					<CardTitle className='text-2xl text-center whitespace-normal break-words leading-tight font-bold tracking-tight bg-gradient-to-r from-[rgb(var(--brand-navy))] to-[rgb(var(--brand-gold))] bg-clip-text text-transparent'>
+						{service.title}
 					</CardTitle>
 				</CardHeader>
 				<CardContent>

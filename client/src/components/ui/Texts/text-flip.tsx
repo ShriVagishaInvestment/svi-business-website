@@ -58,7 +58,7 @@ export function TextFlip({
 	}, [words, interval]);
 
 	return (
-		<motion.p
+		<motion.span
 			layout
 			layoutId={`words-here-${id}`}
 			animate={{ width }}
@@ -72,7 +72,7 @@ export function TextFlip({
 				className
 			)}
 			key={words[currentWordIndex]}>
-			<motion.div
+			<motion.span
 				transition={{
 					duration: animationDuration / 1000,
 					ease: 'easeInOut',
@@ -80,7 +80,7 @@ export function TextFlip({
 				className={cn('inline-block', textClassName)}
 				ref={textRef}
 				layoutId={`word-div-${words[currentWordIndex]}-${id}`}>
-				<motion.div className='inline-block'>
+				<motion.span className='inline-block'>
 					{words[currentWordIndex].split('').map((letter, index) => (
 						<motion.span
 							key={index}
@@ -98,8 +98,8 @@ export function TextFlip({
 							<Aurora>{letter}</Aurora>
 						</motion.span>
 					))}
-				</motion.div>
-			</motion.div>
-		</motion.p>
+				</motion.span>
+			</motion.span>
+		</motion.span>
 	);
 }

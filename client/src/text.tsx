@@ -160,7 +160,7 @@ export const CONTACT_FORM_TEXT = {
 			type: 'tel',
 			name: 'user_phone',
 			inputClass:
-				'w-full focus-ring bg-white dark:bg-black border-white dark:border-white text-black dark:text-white dark:text-white placeholder-gray-400 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300',
+				'w-full focus-ring bg-white dark:bg-black border-white dark:border-white text-black dark:text-white placeholder-gray-400 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300',
 			required: false,
 		},
 		{
@@ -233,7 +233,7 @@ import {
 } from 'lucide-react';
 
 export const FOOTER_COMPANY = {
-	title: { COMPANY_NAME },
+	title: COMPANY_NAME,
 	subtitle: 'Your trusted partner in financial growth.',
 };
 
@@ -252,7 +252,7 @@ export const FOOTER_CONTACT = {
 			icon: Phone,
 			label: 'Phone',
 			value: '+91 9826084116',
-			href: 'tel:+91 9826084116',
+			href: 'tel:+919826084116',
 		},
 		{
 			icon: Mail,

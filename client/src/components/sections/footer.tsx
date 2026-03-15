@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import {
 	FOOTER_LINKS,
 	FOOTER_CONTACT,

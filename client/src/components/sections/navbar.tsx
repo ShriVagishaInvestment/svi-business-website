@@ -77,8 +77,16 @@ export default function NavBar() {
 				</Button>
 			</div>
 
+			{/* Mobile Menu Overlay — rendered first so dropdown sits on top */}
 			{isMobileMenuOpen && (
-				<div className='md:hidden absolute top-full w-full bg-white/95 dark:bg-gray-900/95 border-b border-gray-200/20 dark:border-gray-800/20 shadow-lg'>
+				<div
+					className='md:hidden fixed inset-0 bg-black/20 z-40'
+					onClick={() => setIsMobileMenuOpen(false)}
+				/>
+			)}
+
+			{isMobileMenuOpen && (
+				<div className='md:hidden absolute top-full w-full bg-white/95 dark:bg-gray-900/95 border-b border-gray-200/20 dark:border-gray-800/20 shadow-lg z-50'>
 					<nav className='flex flex-col py-4'>
 						{NAV_LINKS.map(item => (
 							<Button
@@ -91,14 +99,6 @@ export default function NavBar() {
 						))}
 					</nav>
 				</div>
-			)}
-
-			{/* Mobile Menu Overlay */}
-			{isMobileMenuOpen && (
-				<div
-					className='md:hidden fixed inset-0 bg-black/20 z-40'
-					onClick={() => setIsMobileMenuOpen(false)}
-				/>
 			)}
 		</header>
 	);

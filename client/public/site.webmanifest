@@ -1,0 +1,21 @@
+{
+	"name": "Shri Vagisha Investments",
+	"short_name": "SVI",
+	"description": "Trusted financial advisory firm in Indore — Mutual Funds, NPS, Insurance, Bonds & more.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#f5f7fa",
+	"theme_color": "#34495e",
+	"icons": [
+		{
+			"src": "/company-logo-bg.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/company-logo-bg.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

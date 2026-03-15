@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	WHY_US_SECTION_TITLE,
 	WHY_US_SECTION_SUBTITLE,

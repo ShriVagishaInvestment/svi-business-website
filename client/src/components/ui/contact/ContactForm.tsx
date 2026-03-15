@@ -8,7 +8,7 @@ import LabelInputContainer from './LabelInputContainer';
 import { CONTACT_FORM_TEXT, FOOTER_SOCIAL } from '@/text';
 
 const ContactForm = () => {
-	const [isSubmitting] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [result, setResult] = useState('');
 	const form = useRef<HTMLFormElement>(null);
 
@@ -21,20 +21,27 @@ const ContactForm = () => {
 
 	const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
+		setIsSubmitting(true);
 		setResult(CONTACT_FORM_TEXT.sending);
 		const formElement = event.target as HTMLFormElement;
 		const formData = new FormData(formElement);
 		formData.append('access_key', CONTACT_FORM_TEXT.accessKey);
-		const response = await fetch(CONTACT_FORM_TEXT.apiUrl, {
-			method: 'POST',
-			body: formData,
-		});
-		const data = await response.json();
-		if (data.success) {
-			setResult(CONTACT_FORM_TEXT.success);
-			formElement.reset();
-		} else {
-			setResult(data.message);
+		try {
+			const response = await fetch(CONTACT_FORM_TEXT.apiUrl, {
+				method: 'POST',
+				body: formData,
+			});
+			const data = await response.json();
+			if (data.success) {
+				setResult(CONTACT_FORM_TEXT.success);
+				formElement.reset();
+			} else {
+				setResult(data.message);
+			}
+		} catch {
+			setResult('Something went wrong. Please try again.');
+		} finally {
+			setIsSubmitting(false);
 		}
 	};
 
@@ -45,11 +52,6 @@ const ContactForm = () => {
 				className='space-y-6 w-full'
 				ref={form}
 				onSubmit={onSubmit}>
-				<input
-					type='hidden'
-					name='access_key'
-					value={CONTACT_FORM_TEXT.accessKey}
-				/>
 				<div className='space-y-4 m-4'>
 					{CONTACT_FORM_TEXT.fields.map(field => (
 						<LabelInputContainer key={field.name}>
